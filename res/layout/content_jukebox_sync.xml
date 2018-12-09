@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<android.support.constraint.ConstraintLayout
+                xmlns:android = "http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools = "http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height = "match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:showIn="@layout/activity_jukebox_sync"
+                tools:context = ".JukeboxHome">
+
+    <TextView android:text="@string/action_sync"
+              android:layout_width="match_parent"
+              android:layout_height="40sp"
+              android:id="@+id/sync_header"
+              android:textSize="24sp"
+              android:layout_marginTop="10sp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toTopOf="@+id/sync_back_button"
+              android:textAlignment="center"/>
+
+    <TextView android:text="@string/action_sync_text"
+              android:layout_width="match_parent"
+              android:layout_height="100sp"
+              android:id="@+id/sync_text"
+              android:textSize="12sp"
+              android:layout_marginTop="2sp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/sync_header"
+              app:layout_constraintBottom_toTopOf="@+id/sync_back_button"
+              android:textAlignment="center"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sync"
+            android:id="@+id/sync_now_button"
+            app:layout_constraintRight_toLeftOf="@id/sync_back_button"
+            app:layout_constraintTop_toBottomOf="@+id/sync_text"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:id="@+id/sync_back_button"
+            app:layout_constraintLeft_toRightOf="@id/sync_now_button"
+            app:layout_constraintTop_toBottomOf="@+id/sync_text"/>
+
+</android.support.constraint.ConstraintLayout>

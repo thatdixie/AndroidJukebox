@@ -1,0 +1,63 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<android.support.constraint.ConstraintLayout
+                xmlns:android = "http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools = "http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height = "match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:showIn="@layout/activity_jukebox_settings"
+                tools:context = ".JukeboxHome">
+
+    <TextView android:text="@string/action_settings"
+              android:layout_width="match_parent"
+              android:layout_height="75sp"
+              android:id="@+id/settings_text"
+              android:textSize="35sp"
+              android:layout_marginTop="50sp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toTopOf="@+id/edit_context"
+              android:textAlignment="center"/>
+
+    <EditText
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/edit_context"
+            android:hint="App Context"
+            android:focusable = "true"
+            app:layout_constraintTop_toBottomOf="@+id/settings_text"
+            app:layout_constraintBottom_toTopOf="@+id/edit_apiurl"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="APIURL"
+            android:id="@+id/edit_apiurl"
+            app:layout_constraintTop_toBottomOf="@+id/edit_context"
+            app:layout_constraintBottom_toTopOf="@+id/edit_auth"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="AUTH"
+            android:id="@+id/edit_auth"
+            app:layout_constraintTop_toBottomOf="@+id/edit_apiurl"
+            app:layout_constraintBottom_toTopOf="@+id/update_button"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:id="@+id/update_button"
+            app:layout_constraintTop_toBottomOf="@+id/edit_auth"
+            app:layout_constraintRight_toLeftOf="@+id/settings_cancel_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/settings_cancel_button"
+            app:layout_constraintLeft_toRightOf="@+id/update_button"
+            app:layout_constraintTop_toBottomOf="@+id/edit_auth"/>
+
+
+</android.support.constraint.ConstraintLayout>

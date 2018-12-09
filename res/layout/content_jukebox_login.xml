@@ -1,0 +1,67 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<android.support.constraint.ConstraintLayout
+                xmlns:android = "http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools = "http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height = "match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:showIn="@layout/activity_jukebox_login"
+                tools:context = ".JukeboxHome">
+
+    <TextView android:text="@string/login"
+              android:layout_width="match_parent"
+              android:layout_height="75sp"
+              android:id="@+id/login_text"
+              android:textSize="35sp"
+              android:layout_marginTop="50sp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toTopOf="@+id/edit_login"
+              android:textAlignment="center"/>
+
+    <EditText
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/edit_login"
+            android:hint="Email"
+            android:focusable = "true"
+            app:layout_constraintTop_toBottomOf="@+id/login_text"
+            app:layout_constraintBottom_toTopOf="@+id/edit_password"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:ems="10"
+            android:id="@+id/edit_password"
+            app:layout_constraintTop_toBottomOf="@+id/edit_login"
+            app:layout_constraintBottom_toTopOf="@+id/login_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login2"
+            android:id="@+id/login_button"
+            app:layout_constraintTop_toBottomOf="@+id/edit_password"
+            app:layout_constraintRight_toLeftOf="@+id/cancel_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/cancel_button"
+            app:layout_constraintLeft_toRightOf="@+id/login_button"
+            app:layout_constraintTop_toBottomOf="@+id/edit_password"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:id="@+id/forgot_password"
+            android:layout_marginTop="12sp"
+            android:layout_marginLeft="12sp"
+            app:layout_constraintLeft_toRightOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/edit_password"/>
+
+</android.support.constraint.ConstraintLayout>

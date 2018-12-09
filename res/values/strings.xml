@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">The Peoples Jukebox</string>
+    <string name="action_catalog">View My Catalog</string>
+    <string name="action_sync_catalog">Sync My Catalog</string>
+    <string name="action_play_jukebox">Play My Jukebox</string>
+    <string name="action_about">About The Peoples Jukebox</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_settings">App Settings</string>
+    <string name="action_sync">Sync Music to Catalog</string>
+    <string name="action_about_version">Jukebox ALPHA-1.0</string>
+    <string name="action_sync_text">
+        To Sync your music to the peoples jukebox, means you can make the songs you have stored in your Android device
+        Music folder available to users on the Internet, who will choose songs to play from your catalog.
+    </string>
+
+    <string name="stop">STOP</string>
+    <string name="next">NEXT</string>
+    <string name="play">PLAY</string>
+    <string name="pause">PAUSE</string>
+    <string name="login">The Peoples Login</string>
+    <string name="login2">LOGIN</string>
+    <string name="cancel">CANCEL</string>
+    <string name="update">UPDATE</string>
+    <string name="now_playing">now playing</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="back">BACK TO JUKEBOX</string>
+    <string name="sync">SYNC CATALOG</string>
+
+</resources>

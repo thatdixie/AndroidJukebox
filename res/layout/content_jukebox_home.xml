@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                             tools:context=".JukeboxHome"
+                                             tools:showIn="@layout/activity_jukebox_home">
+
+    <!-- ******************************************* -->
+    <!-- The Following is layout for Jukebox Profile -->
+    <!-- ******************************************* -->
+
+    <TextView
+            android:id="@+id/jukebox_title"
+            android:text=""
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textSize="24sp"
+            android:layout_height="30sp"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/now_playing"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/now_playing"
+            android:text=""
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textSize="24sp"
+            android:layout_height="58sp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/jukebox_title"
+            app:layout_constraintBottom_toTopOf="@+id/jukebox_photo"
+            android:textColor="@android:color/holo_red_dark"
+            android:textAlignment="center"/>
+
+    <ImageView
+            android:adjustViewBounds="true"
+            android:id="@+id/jukebox_photo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/jukebox"
+            app:layout_constrainedWidth="true"
+            app:layout_constrainedHeight="true"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/now_playing"
+            app:layout_constraintBottom_toTopOf="@+id/seekBar"/>
+
+    <!-- **************************************** -->
+    <!-- The Following is layout for Music Player -->
+    <!-- **************************************** -->
+
+    <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/jukebox_photo"
+            app:layout_constraintBottom_toTopOf="@id/play_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:id="@+id/play_button"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause"
+            android:id="@+id/pause_button"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/play_button"
+            app:layout_constraintRight_toLeftOf="@id/stop_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop"
+            android:id="@+id/stop_button"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/pause_button"
+            app:layout_constraintRight_toLeftOf="@id/next_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:id="@+id/next_button"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/stop_button"/>
+
+</android.support.constraint.ConstraintLayout>
